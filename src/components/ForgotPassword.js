@@ -20,9 +20,12 @@ export function ForgotPassword() {
   //Send request to the back-end
   const sendRequest = async () => {
     const res = await axios
-      .post(`http://localhost:5000/user/forgot-password`, {
-        email: input.email,
-      })
+      .post(
+        `https://password-reset-flow-app.herokuapp.com/user/forgot-password`,
+        {
+          email: input.email,
+        }
+      )
       .catch((err) => console.log(err));
 
     const data = await res.data;
