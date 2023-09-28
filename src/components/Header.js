@@ -36,7 +36,7 @@ export function Header() {
       position="sticky"
       sx={{
         background:
-          "linear-gradient(90deg, #0072ff, #ffffff)",
+          "linear-gradient(90deg, #FF6B6B 0%, #FFE66D 100%)",
     >
       <Toolbar>
         <Typography variant="h4">DemoApp</Typography>
