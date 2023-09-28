@@ -36,7 +36,7 @@ export function Header() {
       position="sticky"
       sx={{
         background:
-          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,34,214,1) 0%, rgba(33,195,222,1) 35%, rgba(114,109,209,1) 67%, rgba(169,8,180,1) 100%, rgba(0,212,255,1) 100%)",
+          "linear-gradient(90deg, #00a3e0 0%, #0093c4 0%, rgba(33,195,222,1) 35%, rgba(114,109,209,1) 67%, rgba(169,8,180,1) 100%, rgba(0,212,255,1) 100%)",
       }}
     >
       <Toolbar>
