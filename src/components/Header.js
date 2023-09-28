@@ -1,12 +1,18 @@
-import { AppBar, Button, Toolbar, Typography, Box } from "@mui/material";
+import React from "react";
+import {
+  AppBar,
+  Button,
+  Toolbar,
+  Typography,
+  Box,
+  IconButton,
+  MenuItem,
+  Menu,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../store";
-import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import React from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +21,6 @@ export function Header() {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
 
-  const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleMenu = (event) => {
@@ -40,7 +45,7 @@ export function Header() {
           {!isLoggedIn && (
             <>
               <Button
-                LinkComponent={Link}
+                component={Link}
                 to="/login"
                 variant="contained"
                 color="warning"
@@ -49,7 +54,7 @@ export function Header() {
                 Login
               </Button>
               <Button
-                LinkComponent={Link}
+                component={Link}
                 to="/signup"
                 variant="contained"
                 color="warning"
